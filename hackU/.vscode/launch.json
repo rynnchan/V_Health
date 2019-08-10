@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Jdbc",
+            "request": "launch",
+            "mainClass": "Jdbc",
+            "projectName": "hackU"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "hackU"
+        }
+    ]
+}
