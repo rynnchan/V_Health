@@ -8,7 +8,7 @@ public class Write {
         Connection connection = null;
         try {
             // 読み込む対象のデータ
-            String csv = args.length>0 ? args[0] : "ごはん.csv";
+            String csv = args.length>0 ? args[0] : "../../CSV/ごはん.csv";
             // テーブル名の指定
             String table = args.length>0 ? args[1] : "ごはん";
 

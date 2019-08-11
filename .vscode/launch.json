@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Write",
+            "request": "launch",
+            "mainClass": "Write",
+            "projectName": "hackU"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Csv2Sqlite",
             "request": "launch",
             "mainClass": "Csv2Sqlite",
