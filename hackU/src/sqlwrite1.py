@@ -10,15 +10,9 @@ cur = conn.cursor()
 
 # ごはんという名前のtableを作成する
 cur.execute("""CREATE TABLE IF NOT EXISTS エネルギー必要量
-(メニュー名 STRING,
-カロリー INTEGER,
-タンパク質 DOUBLE,
-脂質 DOUBLE,
-炭水化物 DOUBLE,
-塩分 DOUBLE,
-赤 DOUBLE,
-緑 DOUBLE,
-黄 DOUBLE);""")
+(性別 STRING,
+活動レベル STRING,
+エネルギー量 INTEGER);""")
 
 # csvファイルを開く
 with open('CSV\エネルギー必要量.csv', 'rt', encoding="utf-8") as f:
@@ -26,7 +20,7 @@ with open('CSV\エネルギー必要量.csv', 'rt', encoding="utf-8") as f:
     header = next(b)
     for t in b:
         # tableに各行のデータを挿入する
-        cur.execute('INSERT INTO エネルギー必要量 VALUES (?,?,?,?,?,?,?,?,?);', t)
+        cur.execute('INSERT INTO エネルギー必要量 VALUES (?,?,?);', t)
 
 # DBの変更を保存する
 conn.commit()
