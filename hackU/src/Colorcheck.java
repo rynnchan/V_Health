@@ -5,16 +5,12 @@ public class Colorcheck {
     private static int cnt = 0;
     private static double[][] list = new double[3][21];
 
-    private double[] colors = new double[3];
-
-    Colorcheck(double[] colors){
-        this.colors = colors;
+    Colorcheck(){
     }
 
     // 各群の点数を要素とする配列を受け取り、過去21回分（1週間分）の各群の点数の和を計算
     // そして、その和から最も点数の少ない群をintで返す関数
-    public int minColor() {
-        double[] colors = getColors();
+    public int minColor(double[] colors) {
         double[] sum = new double[3];
         int color = RED;
 
@@ -41,16 +37,7 @@ public class Colorcheck {
         return color;
     }
 
-    public double[] getColors(){
-        return this.colors;
-    }
     public static double[][] getList(){
         return list;
     }
-
-    public void setColors(double[] colors){
-        this.colors = colors;
-    }
-
-
 }
