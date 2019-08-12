@@ -24,18 +24,17 @@ public class Sleep {
     }
 
     public static double Sleep_imp(int[] sleep_time) {
-        double imp;
-        double diff;
+        double imp, diff;
         int sleep_h = sleep_time[0];
         int sleep_m = 60 - sleep_time[1];
         
-        // 6時間以上の場合、影響なし
-        // そうでない場合、6時間との差を出し、その差が大きいほど影響が大きい（1に近い）
-        if (sleep_h >= 6)
+        // 7時間以上の場合、影響なし
+        // そうでない場合、7時間との差を出し、その差が大きいほど影響が大きい（1に近い）
+        if (sleep_h >= 7)
             imp = 0;
         else {
-            diff = (6 - sleep_h) + (sleep_m / 60);
-            imp = diff / 6;
+            diff = (7 - sleep_h) + (sleep_m / 60);
+            imp = diff / 7;
         }
         return imp;
     }
