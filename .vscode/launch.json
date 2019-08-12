@@ -2,21 +2,16 @@
     "configurations": [
         {
             "type": "java",
-            "name": "CodeLens (Launch) - Write",
+            "name": "CodeLens (Launch) - Sleep",
+            "console": "integratedTerminal",
             "request": "launch",
-            "mainClass": "Write",
-            "projectName": "hackU"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - Csv2Sqlite",
-            "request": "launch",
-            "mainClass": "Csv2Sqlite",
+            "mainClass": "Sleep",
             "projectName": "hackU"
         },
         {
             "type": "java",
             "name": "CodeLens (Launch) - Main",
+            "console": "integratedTerminal",
             "request": "launch",
             "mainClass": "Main",
             "projectName": "hackU"
