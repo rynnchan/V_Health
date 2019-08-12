@@ -42,6 +42,7 @@ public class Sleep {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        // 入力は0:00 ~ 23:59の間で
         System.out.println("寝た時間を入力してください。");
         System.out.print("何時：");
         int start_h = scan.nextInt();
