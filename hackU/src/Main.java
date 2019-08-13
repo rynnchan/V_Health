@@ -10,10 +10,10 @@ public class Main {
         colors = newColors(0,5,1);
         System.out.println(colorcheck.minColor(colors,0));
 
-        colorcheck.printList();
+        Colorcheck.printList();
         
-        colorcheck.initializeList(0);
-        colorcheck.printList();
+        Colorcheck.initializeList(0);
+        Colorcheck.printList();
 
         System.out.println(colorcheck.salt(0, 7));
         System.out.println(colorcheck.salt(0, 8));

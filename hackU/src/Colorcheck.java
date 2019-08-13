@@ -31,13 +31,13 @@ public class Colorcheck {
 
     // 各群の点数を要素とする配列を受け取り、1週間分の各群の点数の和を計算
     // そして、その和から最も点数の少ない群をintで返す関数
-    public int minColor(double[] colors, int week) {
+    public int minColor(double[] colors, int day) {
         double[] sum = new double[3];
         int color = RED;
 
         // 受け取った各群の点数を配列に格納し、これまでの点数和を算出
         for (int i = 0; i < 3; i++) {
-            list[i][week] += colors[i];
+            list[i][day] += colors[i];
             for (int j = 0; j < 7; j++) {
                 sum[i] += list[i][j];
             }
@@ -64,9 +64,9 @@ public class Colorcheck {
         }
     }
 
-    public static void initializeList(int week){
+    public static void initializeList(int day){
         for(int i=0; i<3; i++){
-            list[i][week] = 0;
+            list[i][day] = 0;
         }
     }
 }
