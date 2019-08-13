@@ -27,6 +27,4 @@ public class Menu_prop {
         return prop;
     }
 
-    public static void main(String[] args) {
-    }
 }
