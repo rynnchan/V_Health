@@ -2,10 +2,31 @@ public class Colorcheck {
     public static final int RED = 0;
     public static final int GREEN = 1;
     public static final int YELLOW = 2;
+    public static final int MALE = 0;
+    public static final int FEMALE = 1;
+    public static final double MALE_SALT = 8.0;  // 男性の食塩基準
+    public static final double FEMALE_SALT = 7.0;  // 女性の食塩基準
     private static int cnt = 0;
     private static double[][] list = new double[3][21];
 
     Colorcheck(){
+    }
+
+    public double salt(int sex, double salt) {
+        double rat, imp;
+        if (sex == MALE) {
+            rat = MALE_SALT / salt;
+        }
+        else {
+            rat = FEMALE_SALT / salt;
+        }
+
+        imp = 1 - rat;
+        if (imp < 0) {
+            imp = -1 * imp;
+        }
+
+        return imp;
     }
 
     // 各群の点数を要素とする配列を受け取り、過去21回分（1週間分）の各群の点数の和を計算
