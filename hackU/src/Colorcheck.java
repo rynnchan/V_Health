@@ -12,8 +12,10 @@ public class Colorcheck {
     Colorcheck(){
     }
 
+    // sex：性別、salt：塩分摂取量
     public double salt(int sex, double salt) {
         double rat, imp;
+        // 食塩摂取量を（基準値）/（摂取量）のパラメータで評価
         if (sex == MALE) {
             rat = MALE_SALT / salt;
         }
@@ -21,6 +23,7 @@ public class Colorcheck {
             rat = FEMALE_SALT / salt;
         }
 
+        // [0,1]の範囲に対応するようにimpを設定
         imp = 1 - rat;
         if (imp < 0) {
             imp = -1 * imp;
