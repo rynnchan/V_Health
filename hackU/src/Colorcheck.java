@@ -24,10 +24,7 @@ public class Colorcheck {
         }
 
         // [0,1]の範囲に対応するようにimpを設定
-        imp = 1 - rat;
-        if (imp < 0) {
-            imp = -1 * imp;
-        }
+        imp = Math.abs(1 - rat);
 
         return imp;
     }
