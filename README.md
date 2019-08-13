@@ -4,6 +4,7 @@ Hack U 2019に用いるソースコードやcsv形式データの置き場
 
 ## src
 
+- Colorpoint.java：3群の点数からキャラクターのパラメータを
 - Colorcheck.java：3群点数や塩分を用いた健康状態のパラメータ計算
 - Main.java：各クラスのメイン関数
 - Menu_prop.java：3群点数計算の結果に対して、おすすめメニューの返却
