@@ -4,11 +4,20 @@ public class Main {
     public static void main(String[] args) {
         double[] colors = {6,5,4};
         Colorcheck colorcheck = new Colorcheck();
-        System.out.println(colorcheck.minColor(colors));
+        System.out.println(colorcheck.minColor(colors,0));
         colors = newColors(5,5,10);
-        System.out.println(colorcheck.minColor(colors));
+        System.out.println(colorcheck.minColor(colors,0));
         colors = newColors(0,5,1);
-        System.out.println(colorcheck.minColor(colors));
+        System.out.println(colorcheck.minColor(colors,0));
+
+        colorcheck.printList();
+        
+        colorcheck.initializeList(0);
+        colorcheck.printList();
+
+        System.out.println(colorcheck.salt(0, 7));
+        System.out.println(colorcheck.salt(0, 8));
+        System.out.println(colorcheck.salt(0, 9));
     }
 
     public static double[] newColors(double r,double g, double y){

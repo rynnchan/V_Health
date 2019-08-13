@@ -6,8 +6,8 @@ public class Colorcheck {
     public static final int FEMALE = 1;
     public static final double MALE_SALT = 8.0;  // 男性の食塩基準
     public static final double FEMALE_SALT = 7.0;  // 女性の食塩基準
-    private static int cnt = 0;
-    private static double[][] list = new double[3][21];
+    
+    private static double[][] list = new double[3][7];
 
     Colorcheck(){
     }
@@ -29,16 +29,16 @@ public class Colorcheck {
         return imp;
     }
 
-    // 各群の点数を要素とする配列を受け取り、過去21回分（1週間分）の各群の点数の和を計算
+    // 各群の点数を要素とする配列を受け取り、1週間分の各群の点数の和を計算
     // そして、その和から最も点数の少ない群をintで返す関数
-    public int minColor(double[] colors) {
+    public int minColor(double[] colors, int week) {
         double[] sum = new double[3];
         int color = RED;
 
         // 受け取った各群の点数を配列に格納し、これまでの点数和を算出
         for (int i = 0; i < 3; i++) {
-            list[i][cnt] = colors[i];
-            for (int j = 0; j < 21; j++) {
+            list[i][week] += colors[i];
+            for (int j = 0; j < 7; j++) {
                 sum[i] += list[i][j];
             }
         }
@@ -48,17 +48,25 @@ public class Colorcheck {
             color = GREEN;
         else if (sum[0] > sum[2] && sum[1] > sum[2])
             color = YELLOW;
-
-        // カウンターの調整
-        // 21回記録したら、カウンターを0に戻す
-        cnt++;
-        if (cnt == 21)
-            cnt = 0;
         
         return color;
     }
 
     public static double[][] getList(){
         return list;
+    }
+    public static void printList(){
+        for(double[] val : getList()){
+            for(double x : val){
+                System.out.print(x+" ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void initializeList(int week){
+        for(int i=0; i<3; i++){
+            list[i][week] = 0;
+        }
     }
 }
