@@ -1,4 +1,5 @@
 import java.util.*;
+
 public class Menu_prop {
     // 第一引数：品目、第二引数：群、第三引数：メニュー
     public static final String[][][] menu = {{{"おろしハンバーグ", "おろし唐揚げ", "豚キムチ炒め", "アジのエスカベッシュ", "あじフライ"}, 
@@ -15,7 +16,7 @@ public class Menu_prop {
                                             {"かき揚げ天丼(小エビ入り)","カツカレー","天丼","ヒレカツカレー","ハンバーグステーキ丼"}}};
 
 
-    public String[] proposal(int min_color) {
+    public static String[] proposal(int min_color) {
         String[] prop = new String[4];
         Random random = new Random();
         

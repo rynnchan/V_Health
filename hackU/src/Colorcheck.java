@@ -9,11 +9,8 @@ public class Colorcheck {
     
     private static double[][] list = new double[3][7];
 
-    Colorcheck(){
-    }
-
     // sex：性別、salt：塩分摂取量
-    public double salt(int sex, double salt) {
+    public static double salt(int sex, double salt) {
         double rat, imp;
         // 食塩摂取量を（基準値）/（摂取量）のパラメータで評価
         if (sex == MALE) {
@@ -31,7 +28,7 @@ public class Colorcheck {
 
     // 各群の点数を要素とする配列を受け取り、1週間分の各群の点数の和を計算
     // そして、その和から最も点数の少ない群をintで返す関数
-    public int minColor(double[] colors, int day) {
+    public static int minColor(double[] colors, int day) {
         double[] sum = new double[3];
         int color = RED;
 

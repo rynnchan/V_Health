@@ -4,11 +4,8 @@ public class Shape {
     private static double[] list = new double[7];
     private static double bias = 0.4;  // 閾値設定の割合
 
-    Shape(){
-    }
-
     // day：曜日（0~6）、sex：性別（0,1）、level：身体活動レベル（0~2）、calorie：1日の摂取カロリーの合計
-    public double[] calorie_calc(int day, int sex, int level, int calorie) {
+    public static double[] calorie_calc(int day, int sex, int level, int calorie) {
         int sum = 0;
         double ave, imp0;
         double[] imp = new double[2];  // imp[0]：痩せるパラメータ、imp[1]：太るパラメータ
@@ -40,9 +37,5 @@ public class Shape {
                 imp[0] = Math.abs(imp0);
         }
         return imp;
-    }
-    
-    public static void main(String[] args) {
-
     }
 }
