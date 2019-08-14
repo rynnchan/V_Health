@@ -6,15 +6,19 @@ public class Main {
     
     /** main **/
     public static void main(String[] args) {
-        double[] colors = {6,5,4};
+        double[] colors = {3,1,4};
         Colorcheck colorcheck = new Colorcheck();
         Shape shape = new Shape();
         double[] calorie =shape.calorie_calc(day, sex, level, 2600);
         Menu_prop menuProp = new Menu_prop();
+        Colorpoint cp = new Colorpoint();
         String[] suggestMenu = menuProp.proposal(0);
         for(String menu : suggestMenu){
             System.out.println(menu);
         }
+
+        double[] colorpoint= cp.colorpoint(colors, sex);
+        System.out.println(colorpoint[0]+" "+colorpoint[1]);
 
         /*
         System.out.println(calorie[0]+" "+calorie[1]);
