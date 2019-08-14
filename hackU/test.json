@@ -1,0 +1,13 @@
+[
+    {
+        "day": 1,
+        "sex": 1,
+        "level": 2,
+        "calorie" : 1000,
+        "start_h" : 1,
+        "start_m" : 30,
+        "end_h" : 7,
+        "end_m" : 30,
+        "color" : [6, 3, 10]
+    }
+]

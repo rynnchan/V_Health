@@ -1,4 +1,6 @@
+import java.io.*;
 import org.json.JSONObject;
+import org.json.JSONArray;
 
 public class Main {
     
@@ -17,6 +19,33 @@ public class Main {
 
         double[] color = {0, 0, 0};  // 3群点数が格納された配列
         // これより上の変数は実際にはフロントエンド側からJSONで受け取る
+
+        try {  
+            // ファイルの内容の読み込み  
+            FileInputStream fileInputStream = new FileInputStream("hackU/test.json");  
+            byte[] buffer = new byte[fileInputStream.available()];  
+            fileInputStream.read(buffer);  
+            fileInputStream.close();  
+            
+            // 読み込んだ内容をJSONArrayにパース  
+            String json = new String(buffer);  
+            JSONArray jsonArray = new JSONArray(json);  
+            
+            // パースした内容からListオブジェクトを作成  
+            for(int i = 0; i < jsonArray.length(); i++) {  
+                JSONObject jsonObject = (JSONObject) jsonArray.get(i);
+                day = jsonObject.getInt("day");
+                sex = jsonObject.getInt("sex");
+                level = jsonObject.getInt("level");
+                calorie = jsonObject.getInt("calorie");
+                start_h = jsonObject.getInt("start_h");
+                start_m = jsonObject.getInt("start_m");
+                end_h = jsonObject.getInt("end_h");
+                end_m = jsonObject.getInt("end_m");
+            }
+        } catch (Exception e) {  
+            System.out.println(e);
+        }
 
         // このパラメータはサーバで計算される
         int min_color = Colorcheck.minColor(color, day); // 最も点数の少ない群
@@ -42,6 +71,8 @@ public class Main {
         json_unity.put("good", balance[1]);
         json_unity.put("bad", balance[0]);
 
+        System.out.println(json_unity);
+
         // フロントエンド側に送信するJSONの作成
         JSONObject json_front = new JSONObject();
 
@@ -50,5 +81,7 @@ public class Main {
         json_front.put("menu_fukusai", menu[1]);
         json_front.put("menu_men", menu[2]);
         json_front.put("menu_don", menu[3]);
+
+        System.out.println(json_front);
     }
 }
