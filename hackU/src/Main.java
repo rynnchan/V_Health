@@ -2,24 +2,7 @@ import org.json.JSONObject;
 
 public class Main {
     
-    /** main **/
     public static void main(String[] args) {
-        double[] colors = {6,5,4};
-        Colorcheck colorcheck = new Colorcheck();
-        System.out.println(colorcheck.minColor(colors,0));
-        colors = newColors(5,5,10);
-        System.out.println(colorcheck.minColor(colors,0));
-        colors = newColors(0,5,1);
-        System.out.println(colorcheck.minColor(colors,0));
-
-        colorcheck.printList();
-        
-        colorcheck.initializeList(0);
-        colorcheck.printList();
-
-        System.out.println(colorcheck.salt(0, 7));
-        System.out.println(colorcheck.salt(0, 8));
-        System.out.println(colorcheck.salt(0, 9));
         
         // Unity側に送信するJSON作成
         int day = 0;  // 曜日
@@ -36,7 +19,7 @@ public class Main {
         // これより上の変数は実際にはフロントエンド側からJSONで受け取る
 
         // このパラメータはサーバで計算される
-        int min_color = 0; // 最も点数の少ない群
+        int min_color = Colorcheck.minColor(color, day); // 最も点数の少ない群
 
         // 体型パラメータが格納された配列
         double[] shape = Shape.calorie_calc(day, sex, level, calorie);
@@ -67,10 +50,5 @@ public class Main {
         json_front.put("menu_fukusai", menu[1]);
         json_front.put("menu_men", menu[2]);
         json_front.put("menu_don", menu[3]);
-    }
-
-    public static double[] newColors(double r,double g, double y){
-        double[] colors = {r,g,y};
-        return colors;
     }
 }
