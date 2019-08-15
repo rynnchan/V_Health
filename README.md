@@ -13,3 +13,4 @@ Hack U 2019に用いるソースコードやcsv形式データの置き場
 - sqlwrite.py, sqlwrite1.py：SQLテーブルの書き込みを行うプログラム
 - Parse_json.java：JSONファイルのパースを行う
 - Set_json.java：JSONの値がセットされるクラス
+- Controller_json.java：コントローラのクラス
