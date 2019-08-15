@@ -12,5 +12,5 @@ Hack U 2019に用いるソースコードやcsv形式データの置き場
 - Sleep.java：睡眠時間の計算と、その影響度パラメータの計算
 - sqlwrite.py, sqlwrite1.py：SQLテーブルの書き込みを行うプログラム
 - Parse_json.java：JSONファイルのパースを行う
-- Set_json.java：JSONの値がセットされるクラス
-- Controller_json.java：コントローラのクラス
+- Set_json.java：JSONの値がセットされるクラス // 要修正
+- Controller_json.java：コントローラのクラス  // 要修正
