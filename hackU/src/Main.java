@@ -1,6 +1,4 @@
-import java.io.*;
 import org.json.JSONObject;
-import org.json.JSONArray;
 
 public class Main {
     
@@ -19,32 +17,12 @@ public class Main {
 
         double[] color = {0, 0, 0};  // 3群点数が格納された配列
         // これより上の変数は実際にはフロントエンド側からJSONで受け取る
+        
+        String[] key = {"day","sex","level","calorie","start_h","start_m","end_h","end_m"};
+        String[] parse_json = Parse_json.parse_json("url",key);
 
-        try {  
-            // ファイルの内容の読み込み  
-            FileInputStream fileInputStream = new FileInputStream("hackU/test.json");  
-            byte[] buffer = new byte[fileInputStream.available()];  
-            fileInputStream.read(buffer);  
-            fileInputStream.close();  
-            
-            // 読み込んだ内容をJSONArrayにパース  
-            String json = new String(buffer);  
-            JSONArray jsonArray = new JSONArray(json);  
-            
-            // パースした内容からListオブジェクトを作成  
-            for(int i = 0; i < jsonArray.length(); i++) {  
-                JSONObject jsonObject = (JSONObject) jsonArray.get(i);
-                day = jsonObject.getInt("day");
-                sex = jsonObject.getInt("sex");
-                level = jsonObject.getInt("level");
-                calorie = jsonObject.getInt("calorie");
-                start_h = jsonObject.getInt("start_h");
-                start_m = jsonObject.getInt("start_m");
-                end_h = jsonObject.getInt("end_h");
-                end_m = jsonObject.getInt("end_m");
-            }
-        } catch (Exception e) {  
-            System.out.println(e);
+        for(String str : parse_json){
+            System.out.println(str);
         }
 
         // このパラメータはサーバで計算される
