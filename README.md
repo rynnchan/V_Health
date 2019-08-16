@@ -18,3 +18,5 @@ Hack U 2019に用いるソースコードやcsv形式データの置き場
 - Read_json.java：ローカルのJSONファイルから必要なパラメータを受け取るクラス
 - Unity.java：Unity側に送るJSONと同じ名前をフィールドを持つクラス
 - Send_unity.java：Unity側に送るJSON形式のString型に変換するクラス
+- Front.java：フロントエンド側に送るJSONと同じ名前をフィールドを持つクラス
+- Send_front.java：フロントエンド側に送るJSON形式のString型に変換するクラス
