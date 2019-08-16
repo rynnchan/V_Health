@@ -36,6 +36,7 @@ public class Main {
         try {
             String su = Send_unity.send_unity(shape[1], shape[0], sleepy, balance[1], balance[0]);
             System.out.println(su);
+            Send_unity.write_json(su);
         } catch (Exception e) {
             e.printStackTrace();
         }

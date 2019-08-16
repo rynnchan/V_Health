@@ -1,3 +1,4 @@
+import java.io.*;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class Send_unity {
@@ -9,5 +10,22 @@ public class Send_unity {
         String json = mapper.writeValueAsString(u);
 
         return json;
+    }
+
+    public static void write_json(String json){
+        try {
+            // FileWriterクラスのオブジェクトを生成する
+            FileWriter file = new FileWriter("hackU/test.json");
+            // PrintWriterクラスのオブジェクトを生成する
+            PrintWriter pw = new PrintWriter(new BufferedWriter(file));
+            
+            //ファイルに書き込む
+            pw.println(json);
+            
+            //ファイルを閉じる
+            pw.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
