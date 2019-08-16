@@ -3,85 +3,49 @@ import java.io.Serializable;
 public class Set_json implements Serializable {
     private static final long serialVersionUID = 1L;
     
-    private int sex;
-    private int physicalActivityLevel;
-    private String wakeUpTime	;
-    private String bedTime;
-    private double calorie;
-    private double salt;
-    private double red;
-    private double green;
-    private double yellow;
+    private double fat ;
+    private double slim;
+    private double sleepy;
+    private double good;
+    private double bad;
 
-    public int getSex() {
-        return sex;
+    public double getFat() {
+        return fat;
     }
 
-    public void setSex(int sex) {
-        this.sex = sex;
+    public void setFat(double fat) {
+        this.fat = fat;
     }
 
-    public int getPhysicalActivityLevel() {
-        return physicalActivityLevel - 1;
+    public double getSlim() {
+        return slim;
     }
 
-    public void setPhysicalActivityLevel(int physicalActivityLevel) {
-        this.physicalActivityLevel = physicalActivityLevel;
+    public void setSlim(double slim) {
+        this.slim = slim;
     }
 
-    public int[] getWakeUptime() {
-        String[] spl = wakeUpTime.split(":");
-        int[] time = {Integer.parseInt(spl[0], Integer.parseInt(spl[1]))};
-
-        return time;
+    public double getSleepy() {
+        return sleepy;
     }
 
-    public void setWakeUptime(String wakeUpTime) {
-        this.wakeUpTime = wakeUpTime;
+    public void setSleepy(double sleepy) {
+        this.sleepy = sleepy;
     }
 
-    public int[] getBedtime() {
-        String[] spl = bedTime.split(":");
-        int[] time = {Integer.parseInt(spl[0], Integer.parseInt(spl[1]))};
-
-        return time;
+    public double getGood() {
+        return good;
     }
 
-    public void setBedtime(String bedTime) {
-        this.bedTime = bedTime;
+    public void setGood(double good) {
+        this.good = good;
     }
 
-    public int getCalorie() {
-        return (int)calorie;
+    public double getBad() {
+        return bad;
     }
 
-    public void setCalorie(double calorie) {
-        this.calorie = calorie;
-    }
-
-    public double getSalt() {
-        return salt;
-    }
-
-    public void setSalt(double salt) {
-        this.salt = salt;
-    }
-
-    public double[] getColors() {
-        double[] colors = {red, green, yellow};
-
-        return colors;
-    }
-
-    public void setRed(double red) {
-        this.red = red;
-    }
-
-    public void setGreen(double green) {
-        this.green = green;
-    }
-
-    public void setYellow(double yellow) {
-        this.yellow = yellow;
+    public void setBad(double bad) {
+        this.bad= bad;
     }
 }

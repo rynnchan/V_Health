@@ -14,13 +14,11 @@ public class Contoroller_json {
     @ResponseBody
     public Set_json output1(
         @RequestBody Set_json set_json) {
-            System.out.println(set_json.getSex());
-            System.out.println(set_json.getPhysicalActivityLevel());
-            System.out.println(set_json.getWakeUptime());
-            System.out.println(set_json.getBedtime());
-            System.out.println(set_json.getCalorie());
-            System.out.println(set_json.getSalt());
-            System.out.println(set_json.getColors());
+            System.out.println(set_json.getFat());
+            System.out.println(set_json.getSlim());
+            System.out.println(set_json.getSleepy());
+            System.out.println(set_json.getGood());
+            System.out.println(set_json.getBad());
 
             return set_json;
         }
