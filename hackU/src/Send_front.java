@@ -1,3 +1,4 @@
+import java.io.*;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 // String[] menu：おすすめメニューが格納された配列
@@ -5,22 +6,27 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 // int[] sleep：睡眠時間が格納された配列
 public class Send_front {
     public static String send_front(String[] menu, double[] ave, int[] sleep) throws Exception {
-        Front f = new Front();
-        f.mainMenu = menu[0];
-        f.subMenu = menu[1];
-        f.menMenu = menu[2];
-        f.donMenu = menu[3];
-        f.ave_calorie = ave[0];
-        f.ave_protein = ave[1];
-        f.ave_lipid = ave[2];
-        f.ave_carbo = ave[3];
-        f.ave_salt = ave[4];
-        f.sleep_h = sleep[0];
-        f.sleep_m = sleep[1];
+        Front f = new Front(menu,ave,sleep);
 
         ObjectMapper mapper = new ObjectMapper();
         String json = mapper.writeValueAsString(f);
 
         return json;
+    }
+    public static void write_json(String json){
+        try {
+            // FileWriterクラスのオブジェクトを生成する
+            FileWriter file = new FileWriter("hackU/json/front.json");
+            // PrintWriterクラスのオブジェクトを生成する
+            PrintWriter pw = new PrintWriter(new BufferedWriter(file));
+            
+            //ファイルに書き込む
+            pw.println(json);
+            
+            //ファイルを閉じる
+            pw.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

@@ -1,5 +1,3 @@
-import org.json.JSONObject;
-
 public class Main {
     
     public static void main(String[] args) {
@@ -18,9 +16,6 @@ public class Main {
         double[] color = {0, 0, 0};  // 3群点数が格納された配列
         // これより上の変数は実際にはフロントエンド側からJSONで受け取る
 
-        // このパラメータはサーバで計算される
-        int min_color = Colorcheck.minColor(color, day); // 最も点数の少ない群
-
         // 体型パラメータが格納された配列
         double[] shape = Shape.calorie_calc(day, sex, level, calorie);
 
@@ -30,9 +25,6 @@ public class Main {
         // 栄養バランスの良い・悪いのパラメータが格納された配列
         double[] balance = Colorpoint.colorpoint(color, sex);
 
-        // おすすめメニューが格納された配列
-        String[] menu = Menu_prop.proposal(min_color);
-
         try {
             String su = Send_unity.send_unity(shape[1], shape[0], sleepy, balance[1], balance[0]);
             System.out.println(su);
@@ -41,19 +33,22 @@ public class Main {
             e.printStackTrace();
         }
 
+        // このパラメータはサーバで計算される
+        int min_color = Colorcheck.minColor(color, day); // 最も点数の少ない群
+        
+        // おすすめメニューが格納された配列
+        String[] menu = Menu_prop.proposal(min_color);
 
+        double[] ave = new double[5];
 
-        System.out.println(json_unity);
+        int[] sleep = Sleep.Sleep_time(start_h, start_m, end_h, end_m);
 
-        // フロントエンド側に送信するJSONの作成
-        JSONObject json_front = new JSONObject();
-
-        // JSONに値を記録
-        json_front.put("menu_syusai", menu[0]);
-        json_front.put("menu_fukusai", menu[1]);
-        json_front.put("menu_men", menu[2]);
-        json_front.put("menu_don", menu[3]);
-
-        System.out.println(json_front);
+        try {
+            String sf = Send_front.send_front(menu, ave, sleep);
+            System.out.println(sf);
+            Send_front.write_json(sf);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
