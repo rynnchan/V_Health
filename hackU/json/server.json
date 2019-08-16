@@ -1,0 +1,11 @@
+{
+    "sex":1,
+    "physicalActivityLevel":2,
+    "bedTime":"2:00",
+    "wakeUpTime":"7:30",
+    "calorie":2020.0,
+    "salt":8.7,
+    "red":4.3,
+    "green":1.5,
+    "yellow":7.5
+}

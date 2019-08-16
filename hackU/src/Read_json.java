@@ -1,6 +1,40 @@
+import java.io.*;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 
 public class Read_json{
+    public int sex;
+    public int physicalActivityLevel;
+    public int[] bedTime;
+    public int[] wakeUpTime;
+    public int calorie;
+    public double salt;
+    public double red;
+    public double green;
+    public double yellow;
+
+    Read_json(){
+        try {
+            File json = new File("hackU/json/server.json");
+            ObjectMapper mapper = new ObjectMapper();
+            JsonNode root = mapper.readTree(json);
+
+            this.sex = read_sex(root);
+            this.physicalActivityLevel = read_level(root);
+            this.bedTime = read_sleep(root);
+            this.wakeUpTime = read_wake(root);
+            this.calorie = read_calorie(root);
+            this.salt = read_salt(root);
+            this.red = read_red(root);
+            this.green = read_green(root);
+            this.yellow = read_yellow(root);
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
     /*
     以下の関数を使う場合には、
     File json = new File("JSONのパス");
@@ -38,7 +72,7 @@ public class Read_json{
         String wake = root.get("wakeUpTime").textValue();
         String[] list = wake.split(":");
 
-        int[] time = {Integer.parseInt(list[0], Integer.parseInt(list[1]))};
+        int[] time = {Integer.parseInt(list[0]), Integer.parseInt(list[1])};
 
         return time;
     }

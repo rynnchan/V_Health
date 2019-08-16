@@ -3,17 +3,19 @@ public class Main {
     public static void main(String[] args) {
         
         // Unity側に送信するJSON作成
+        Read_json rj = new Read_json();
+
         int day = 0;  // 曜日
-        int sex = 0;  // 性別
-        int level = 0;  // 身体活動レベル
-        int calorie = 0;  // 摂取カロリー
+        int sex = rj.sex;  // 性別
+        int level = rj.physicalActivityLevel;  // 身体活動レベル
+        int calorie = rj.calorie;  // 摂取カロリー
 
-        int start_h = 0;  // 寝た時間（時）
-        int start_m = 0;  // 寝た時間（分）
-        int end_h = 0;  // 起きた時間（時）
-        int end_m = 0;  // 起きた時間（分）
+        int start_h = rj.bedTime[0];  // 寝た時間（時）
+        int start_m = rj.bedTime[1];  // 寝た時間（分）
+        int end_h = rj.wakeUpTime[0];  // 起きた時間（時）
+        int end_m = rj.wakeUpTime[1];  // 起きた時間（分）
 
-        double[] color = {0, 0, 0};  // 3群点数が格納された配列
+        double[] color = {rj.red, rj.green, rj.yellow};  // 3群点数が格納された配列
         // これより上の変数は実際にはフロントエンド側からJSONで受け取る
 
         // 体型パラメータが格納された配列
