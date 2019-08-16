@@ -7,7 +7,7 @@ public class Send_unity {
         Unity u = new Unity(fat,slim,sleepy,good,bad);
 
         ObjectMapper mapper = new ObjectMapper();
-        String json = mapper.writeValueAsString(u);
+        String json = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(u);
 
         return json;
     }

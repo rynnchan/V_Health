@@ -9,7 +9,7 @@ public class Send_front {
         Front f = new Front(menu,ave,sleep);
 
         ObjectMapper mapper = new ObjectMapper();
-        String json = mapper.writeValueAsString(f);
+        String json = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(f);
 
         return json;
     }

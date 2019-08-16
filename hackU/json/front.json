@@ -1,1 +1,13 @@
-{"mainMenu":"揚げだし豆腐","subMenu":"15品目のヘルシーサラダ","donMenu":"蒸し鶏の和風ねばねば丼","menMenu":"かき揚げうどん","ave_calorie":0.0,"ave_protein":0.0,"ave_lipid":0.0,"ave_carbo":0.0,"ave_salt":0.0,"sleep_h":5,"sleep_m":30}
+{
+  "mainMenu" : "かぼちゃコロッケ",
+  "subMenu" : "15品目のヘルシーサラダ",
+  "donMenu" : "スタミナ焼肉丼",
+  "menMenu" : "味噌ラーメン",
+  "ave_calorie" : 0.0,
+  "ave_protein" : 0.0,
+  "ave_lipid" : 0.0,
+  "ave_carbo" : 0.0,
+  "ave_salt" : 0.0,
+  "sleep_h" : 5,
+  "sleep_m" : 30
+}
