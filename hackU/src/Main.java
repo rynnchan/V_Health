@@ -41,14 +41,7 @@ public class Main {
             e.printStackTrace();
         }
 
-        JSONObject json_unity = new JSONObject();
 
-        // JSONに値を記録
-        json_unity.put("fat", shape[1]);
-        json_unity.put("slim", shape[0]);
-        json_unity.put("sleepy", sleepy);
-        json_unity.put("good", balance[1]);
-        json_unity.put("bad", balance[0]);
 
         System.out.println(json_unity);
 
