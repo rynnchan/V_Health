@@ -14,3 +14,4 @@ Hack U 2019に用いるソースコードやcsv形式データの置き場
 - Parse_json.java：JSONファイルのパースを行う
 - Set_json.java：JSONの値がセットされるクラス
 - Controller_json.java：コントローラのクラス
+- index.html：JSONの送受信を行うファイル
