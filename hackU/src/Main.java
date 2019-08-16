@@ -17,13 +17,6 @@ public class Main {
 
         double[] color = {0, 0, 0};  // 3群点数が格納された配列
         // これより上の変数は実際にはフロントエンド側からJSONで受け取る
-        
-        String[] key = {"day","sex","level","calorie","start_h","start_m","end_h","end_m"};
-        String[] parse_json = Parse_json.parse_json("url",key);
-
-        for(String str : parse_json){
-            System.out.println(str);
-        }
 
         // このパラメータはサーバで計算される
         int min_color = Colorcheck.minColor(color, day); // 最も点数の少ない群
@@ -39,6 +32,13 @@ public class Main {
 
         // おすすめメニューが格納された配列
         String[] menu = Menu_prop.proposal(min_color);
+
+        try {
+            String su = Send_unity.send_unity(shape[1], shape[0], sleepy, balance[1], balance[0]);
+            System.out.println(su);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         JSONObject json_unity = new JSONObject();
 
