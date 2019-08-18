@@ -21,4 +21,4 @@ Hack U 2019に用いるソースコードやcsv形式データの置き場
 - Front.java：フロントエンド側に送るJSONと同じ名前をフィールドを持つクラス
 - Send_front.java：フロントエンド側に送るJSON形式のString型に変換するクラス
 - Get_req.java：フロントからのリクエストを受け取る関数
-- Send_req.j：サーバ側にリクエストを送る関数
+- Send_req.js：サーバ側にリクエストを送る関数
