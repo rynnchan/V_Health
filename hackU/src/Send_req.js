@@ -8,7 +8,7 @@ function sampleAjax() {
     // ajaxでservletにリクエストを送信
     $.ajax({
         type    : "GET",          // GET / POST
-        url     : "/urlServlet",  // 送信先のServlet URL
+        url     : "hackU\\dist\\index.html",  // 送信先のServlet URL
         data    : request,        // リクエストJSON
         async   : true,           // true：非同期（デフォルト）、false：同期
         success : function(data) {

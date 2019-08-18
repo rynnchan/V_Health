@@ -9,12 +9,12 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import javax.servlet.http.*;
 
-@WebServlet(urlPatterns={"/urlServlet"})
+@WebServlet(urlPatterns={"hackU\\dist\\index.html"})
 public class Get_req extends HttpServlet {
     private static final long serialVersionUID = 1l;
 
     @Override
-    public void doGet (HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+    public void doPost (HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         try {
             // パラメータ取得
             String param1 = req.getParameter("param1");
