@@ -9,6 +9,9 @@ public class Read_json{
     public int[] bedTime;
     public int[] wakeUpTime;
     public int calorie;
+    public double protein;
+    public double lipid;
+    public double carbohydrate;
     public double salt;
     public double red;
     public double green;
@@ -25,6 +28,9 @@ public class Read_json{
             this.bedTime = read_sleep(root);
             this.wakeUpTime = read_wake(root);
             this.calorie = read_calorie(root);
+            this.protein = read_protein(root);
+            this.lipid = read_lipid(root);
+            this.carbohydrate = read_carbohydrate(root);
             this.salt = read_salt(root);
             this.red = read_red(root);
             this.green = read_green(root);
@@ -79,36 +85,70 @@ public class Read_json{
 
     // JSONから摂取カロリーを受け取る関数
     public static int read_calorie(JsonNode root) {
-        double calorie = root.get("calorie").doubleValue();
-
+        double calorie=0.0;
+        for (JsonNode n : root.get("meal")) {
+            calorie += n.get("calorie").doubleValue();
+        }
         return (int)calorie;
+    }
+    // JSONから摂取カロリーを受け取る関数
+    public static double read_protein(JsonNode root) {
+        double protein=0.0;
+        for (JsonNode n : root.get("meal")) {
+            protein += n.get("protein").doubleValue();
+        }
+        return protein;
+    }
+    // JSONから摂取カロリーを受け取る関数
+    public static double read_lipid(JsonNode root) {
+        double lipid=0.0;
+        for (JsonNode n : root.get("meal")) {
+            lipid += n.get("lipid").doubleValue();
+        }
+        return lipid;
+    }
+    // JSONから摂取カロリーを受け取る関数
+    public static double read_carbohydrate(JsonNode root) {
+        double carbohydrate=0.0;
+        for (JsonNode n : root.get("meal")) {
+            carbohydrate += n.get("carbohydrate").doubleValue();
+        }
+        return carbohydrate;
     }
 
     // JSONから摂取塩分を受け取る関数
     public static double read_salt(JsonNode root) {
-        double salt = root.get("salt").doubleValue();
-
+        double salt = 0.0;
+        for (JsonNode n : root.get("meal")) {
+            salt+= n.get("salt").doubleValue();
+        }
         return salt;
     }
 
     // JSONから赤の点数を受け取る関数
     public static double read_red(JsonNode root) {
-        double red = root.get("red").doubleValue();
-
+        double red = 0.0;
+        for (JsonNode n : root.get("meal")) {
+            red += n.get("red").doubleValue();
+        }
         return red;
     }
 
     // JSONから緑の点数を受け取る関数
     public static double read_green(JsonNode root) {
-        double green = root.get("green").doubleValue();
-
+        double green = 0.0;
+        for (JsonNode n : root.get("meal")) {
+            green += n.get("green").doubleValue();
+        }
         return green;
     }
 
     // JSONから黄の点数を受け取る関数
     public static double read_yellow(JsonNode root) {
-        double yellow = root.get("yellow").doubleValue();
-
+        double yellow = 0.0;
+        for (JsonNode n : root.get("meal")) {
+            yellow += n.get("yellow").doubleValue();
+        }
         return yellow;
     }
 }

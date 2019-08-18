@@ -10,13 +10,17 @@ public class Main {
         int sex = rj.sex;  // 性別
         int level = rj.physicalActivityLevel;  // 身体活動レベル
         int calorie = rj.calorie;  // 摂取カロリー
-
+        double protein = rj.protein;
+        double lipid = rj.lipid;
+        double carbohydrate = rj.carbohydrate;
+        double salt = rj.salt;
         int start_h = rj.bedTime[0];  // 寝た時間（時）
         int start_m = rj.bedTime[1];  // 寝た時間（分）
         int end_h = rj.wakeUpTime[0];  // 起きた時間（時）
         int end_m = rj.wakeUpTime[1];  // 起きた時間（分）
 
         double[] color = {rj.red, rj.green, rj.yellow};  // 3群点数が格納された配列
+        System.out.println(color[0]+","+color[1]+","+color[2]);
         // これより上の変数は実際にはフロントエンド側からJSONで受け取る
 
         // 体型パラメータが格納された配列
@@ -42,7 +46,7 @@ public class Main {
         // おすすめメニューが格納された配列
         String[] menu = Menu_prop.proposal(min_color);
 
-        double[] ave = new double[5];
+        double[] ave = {calorie,protein,lipid,carbohydrate,salt};
 
         double sleep_hour = Sleep.Sleep_hour(Sleep.Sleep_time(start_h, start_m, end_h, end_m));
 
