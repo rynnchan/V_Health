@@ -1,3 +1,4 @@
+import java.util.Calendar;
 public class Main {
     
     public static void main(String[] args) {
@@ -5,7 +6,7 @@ public class Main {
         // Unity側に送信するJSON作成
         Read_json rj = new Read_json();
 
-        int day = 0;  // 曜日
+        int day = Calendar.getInstance().get(Calendar.DAY_OF_WEEK)-1;  // 曜日
         int sex = rj.sex;  // 性別
         int level = rj.physicalActivityLevel;  // 身体活動レベル
         int calorie = rj.calorie;  // 摂取カロリー
