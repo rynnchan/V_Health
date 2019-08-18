@@ -44,10 +44,10 @@ public class Main {
 
         double[] ave = new double[5];
 
-        int[] sleep = Sleep.Sleep_time(start_h, start_m, end_h, end_m);
+        double sleep_hour = Sleep.Sleep_hour(Sleep.Sleep_time(start_h, start_m, end_h, end_m));
 
         try {
-            String sf = Send_front.send_front(menu, ave, sleep);
+            String sf = Send_front.send_front(menu, ave, sleep_hour);
             System.out.println(sf);
             Send_front.write_json(sf);
         } catch (Exception e) {

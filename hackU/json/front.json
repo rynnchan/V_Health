@@ -1,13 +1,12 @@
 {
-  "mainMenu" : "かぼちゃコロッケ",
+  "mainMenu" : "豚キムチ炒め",
   "subMenu" : "15品目のヘルシーサラダ",
-  "donMenu" : "スタミナ焼肉丼",
+  "donMenu" : "蒸し鶏の和風ねばねば丼",
   "menMenu" : "味噌ラーメン",
   "ave_calorie" : 0.0,
   "ave_protein" : 0.0,
   "ave_lipid" : 0.0,
   "ave_carbo" : 0.0,
   "ave_salt" : 0.0,
-  "sleep_h" : 5,
-  "sleep_m" : 30
+  "sleep_hour" : 5.5
 }

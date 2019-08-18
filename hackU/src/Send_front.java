@@ -5,8 +5,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 // double[] ave：各種平均値が格納された配列
 // int[] sleep：睡眠時間が格納された配列
 public class Send_front {
-    public static String send_front(String[] menu, double[] ave, int[] sleep) throws Exception {
-        Front f = new Front(menu,ave,sleep);
+    public static String send_front(String[] menu, double[] ave, double sleep_hour) throws Exception {
+        Front f = new Front(menu,ave,sleep_hour);
 
         ObjectMapper mapper = new ObjectMapper();
         String json = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(f);
