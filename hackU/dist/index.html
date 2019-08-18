@@ -72,7 +72,7 @@
                 for( var i=0; i<7; i++ ){
                      //var key = localStorage.key();
                      //console.log(localStorage.key(0));
-                     sll[i] = localStorage.getItem("キー"+(dayOfWeek+i+1)%7);
+                    sll[i] = localStorage.getItem("キー"+(dayOfWeek+i+1)%7);
                 }
                 //sll[m] = data.sleep_h;
     
@@ -105,7 +105,7 @@
                 return [arb,sll];
                 
             }
-           
+
             function displayData(){
                 if ((httpObj.readyState == 4) && (httpObj.status == 200)){
                     [arc,sl] = parseJSON(httpObj.responseText);
@@ -144,7 +144,8 @@
                             startValue: 80,
                             endValue: 210
                         }
-                                      ]}
+                        ]
+                    }
                 },
                 data: [{
                     type: "bar",
@@ -159,7 +160,7 @@
                 }]
             });
             
-           var chart1 = new CanvasJS.Chart("chartContainer1", {
+            var chart1 = new CanvasJS.Chart("chartContainer1", {
                 animationEnabled: true,
                 theme: "light2",
                 title:{
@@ -189,18 +190,18 @@
     <!--タイトル-->
     <title>HackU2</title>
     </head>
-  <body data-n-head="">
+    <body data-n-head="">
     <div class="container-fluid">
         <div class="row">
             <div class="header-logo col-12" style="background-color: limegreen;
             padding: 20px 20px;"><h1>HackU</h1></div>
             <div class="webgl-content">
-              <div id="gameContainer" style="width: 700px; height: 695px"></div>
-              <div class="footer">
-                <div class="webgl-logo"></div>
-                <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
-                <div class="title"></div>
-              </div>
+                <div id="gameContainer" style="width: 700px; height: 695px"></div>
+                <div class="footer">
+                    <div class="webgl-logo"></div>
+                    <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+                    <div class="title"></div>
+                </div>
             </div>
             <div class="col-6">
                 <div class="row">
@@ -230,5 +231,5 @@
         </script>
         </div>
     <div id="__nuxt"><style>#nuxt-loading{visibility:hidden;opacity:0;position:absolute;left:0;right:0;top:0;bottom:0;display:flex;justify-content:center;align-items:center;flex-direction:column;animation:nuxtLoadingIn 10s ease;-webkit-animation:nuxtLoadingIn 10s ease;animation-fill-mode:forwards;overflow:hidden}@keyframes nuxtLoadingIn{0%{visibility:hidden;opacity:0}20%{visibility:visible;opacity:0}100%{visibility:visible;opacity:1}}@-webkit-keyframes nuxtLoadingIn{0%{visibility:hidden;opacity:0}20%{visibility:visible;opacity:0}100%{visibility:visible;opacity:1}}#nuxt-loading>div,#nuxt-loading>div:after{border-radius:50%;width:5rem;height:5rem}#nuxt-loading>div{font-size:10px;position:relative;text-indent:-9999em;border:.5rem solid #f5f5f5;border-left:.5rem solid #fff;-webkit-transform:translateZ(0);-ms-transform:translateZ(0);transform:translateZ(0);-webkit-animation:nuxtLoading 1.1s infinite linear;animation:nuxtLoading 1.1s infinite linear}#nuxt-loading.error>div{border-left:.5rem solid #ff4500;animation-duration:5s}@-webkit-keyframes nuxtLoading{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes nuxtLoading{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}</style><script>window.addEventListener("error",function(){var e=document.getElementById("nuxt-loading");e&&(e.className+=" error")})</script><div id="nuxt-loading" aria-live="polite" role="status"><div>Loading...</div></div></div>
-  <script type="text/javascript" src="/_nuxt/2712ea7cbbad00c2e7eb.js"></script><script type="text/javascript" src="/_nuxt/e70186a8aad688c6899e.js"></script><script type="text/javascript" src="/_nuxt/3299d0e8f8f0544657b1.js"></script><script type="text/javascript" src="/_nuxt/c89f474270b30c07276a.js"></script></body>
+    <script type="text/javascript" src="/_nuxt/2712ea7cbbad00c2e7eb.js"></script><script type="text/javascript" src="/_nuxt/e70186a8aad688c6899e.js"></script><script type="text/javascript" src="/_nuxt/3299d0e8f8f0544657b1.js"></script><script type="text/javascript" src="/_nuxt/c89f474270b30c07276a.js"></script></body>
 </html>
