@@ -1,0 +1,13 @@
+{
+  "mainMenu" : "かぼちゃコロッケ",
+  "subMenu" : "15品目のヘルシーサラダ",
+  "donMenu" : "スタミナ焼肉丼",
+  "menMenu" : "味噌ラーメン",
+  "ave_calorie" : 15.0,
+  "ave_protein" : 3.0,
+  "ave_lipid" : 4.0,
+  "ave_carbo" : 5.0,
+  "ave_salt" : 8.0,
+  "sleep_h" : 15,
+  "sleep_m" : 10
+}
