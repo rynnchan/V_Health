@@ -15,15 +15,15 @@ public class Colorpoint {
         double yellow = color[2];
 
         double first = red + green;  // 必須点数（9点目安）
-
+        first = Math.min(first, 9);
         colorpoint[0] = 1 - (first / 9);
             if (colorpoint[0] < 0) 
                 colorpoint[0] = Math.abs(colorpoint[0]);
-        
+
         if (sex == MALE)
-        colorpoint[1] = (first / 9) * p + (yellow / MALE_POINT) * (1 - p);
+        colorpoint[1] = (first / 9) * p + (Math.min(yellow,MALE_POINT) / MALE_POINT) * (1 - p);
         else
-        colorpoint[1] = (first / 9) * p + (yellow / FEMALE_POINT) * (1 - p);
+        colorpoint[1] = (first / 9) * p + (Math.min(yellow,FEMALE_POINT) / FEMALE_POINT) * (1 - p);
 
         return colorpoint;
     }

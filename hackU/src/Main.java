@@ -20,7 +20,7 @@ public class Main {
         int end_m = rj.wakeUpTime[1];  // 起きた時間（分）
 
         double[] color = {rj.red, rj.green, rj.yellow};  // 3群点数が格納された配列
-        System.out.println(color[0]+","+color[1]+","+color[2]);
+        //System.out.println(color[0]+","+color[1]+","+color[2]);
         // これより上の変数は実際にはフロントエンド側からJSONで受け取る
 
         // 体型パラメータが格納された配列

@@ -1,12 +1,12 @@
 {
-  "mainMenu" : "スパイシーポテト",
-  "subMenu" : "15品目のヘルシーサラダ",
-  "donMenu" : "蒸し鶏の和風ねばねば丼",
+  "mainMenu" : "豚キムチ炒め",
+  "subMenu" : "ポテト＆コーンサラダ",
+  "donMenu" : "天丼",
   "menMenu" : "かき揚げそば",
   "ave_calorie" : 2426.0,
   "ave_protein" : 91.0,
   "ave_lipid" : 60.400000000000006,
   "ave_carbo" : 364.9,
   "ave_salt" : 11.4,
-  "sleep_hour" : 18.033333333333335
+  "sleep_hour" : 18.0
 }
