@@ -1,0 +1,21 @@
+{
+    "breakfast":{
+        "rice":{
+            "menu":"(小)ライス130g",
+            "calorie":"221",
+            "protein":"3.9",
+            "lipid":"30.8",
+            "carbohydrate":"48.1",
+            "salt":"5.9",
+            "red":"0",
+            "green":"0",
+            "yellow":"2.8"
+        },
+        "main_dish":null,
+        "rice_bowl":null,
+        "side_dish":null,
+        "soup":null,
+        "noodles":null,
+        "dessert":null
+    }
+}
