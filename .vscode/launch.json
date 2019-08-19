@@ -2,6 +2,14 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Test1",
+            "console": "integratedTerminal",
+            "request": "launch",
+            "mainClass": "Test1",
+            "projectName": "hackU"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Sleep",
             "console": "integratedTerminal",
             "request": "launch",
