@@ -4,8 +4,17 @@
   "ave_lipid" : 60.400000000000006,
   "ave_carbohydrate" : 364.9,
   "ave_salt" : 11.4,
-  "ave_red" : 11.4,
-  "ave_green" : 11.4,
-  "ave_yellow" : 11.4,
-  "start" : 20190818
+  "ave_red" : 7.6000000000000005,
+  "ave_green" : 0.5,
+  "ave_yellow" : 22.3,
+  "start" : 20190818,
+  "today" : 20190819,
+  "today_calorie" : 2426.0,
+  "today_protein" : 91.0,
+  "today_lipid" : 60.400000000000006,
+  "today_carbohydrate" : 364.9,
+  "today_salt" : 11.4,
+  "today_red" : 7.6000000000000005,
+  "today_green" : 0.5,
+  "today_yellow" : 22.3
 }

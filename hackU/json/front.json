@@ -1,12 +1,12 @@
 {
-  "mainMenu" : "おろしハンバーグ",
-  "subMenu" : "冷奴",
-  "donMenu" : "辛みそ豚丼",
-  "menMenu" : "きつねうどん",
+  "mainMenu" : "スパイシーポテト",
+  "subMenu" : "ハッシュポテト",
+  "donMenu" : "かき揚げ天丼(小エビ入り)",
+  "menMenu" : "味噌ラーメン",
   "ave_calorie" : 2426.0,
   "ave_protein" : 91.0,
   "ave_lipid" : 60.400000000000006,
   "ave_carbo" : 364.9,
   "ave_salt" : 11.4,
-  "sleep_hour" : 18.0
+  "sleep_hour" : 6.0
 }

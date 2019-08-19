@@ -1,8 +1,8 @@
 {
     "sex": 0,
     "physicalActivityLevel": 1,
-    "wakeUpTime": "01:30",
-    "bedTime": "07:28",
+    "bedTime": "01:28",
+    "wakeUpTime": "07:30",
     "date": "2019-08-18T05:49:41.966Z",
     "meal": {
         "rice": {
