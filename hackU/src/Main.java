@@ -43,6 +43,18 @@ public class Main {
         double today_green=color[1];
         double today_yellow=color[2];
         int today = cal1.get(Calendar.YEAR)*10000+(cal1.get(Calendar.MONTH)+1)*100+cal1.get(Calendar.DAY_OF_MONTH);
+        
+        double ave_n=(today==today_y ? 1 : (n-1)/(double)n );
+        double ave_calorie=Read_json.read_ave_calorie(aj.root)*ave_n+today_calorie/n;
+        double ave_protein=Read_json.read_ave_protein(aj.root)*ave_n+today_protein/n;
+        double ave_lipid=Read_json.read_ave_lipid(aj.root)*ave_n+today_lipid/n;
+        double ave_carbohydrate=Read_json.read_ave_carbohydrate(aj.root)*ave_n+today_carbohydrate/n;
+        double ave_salt=Read_json.read_ave_salt(aj.root)*ave_n+today_salt/n;
+        double ave_red=Read_json.read_ave_red(aj.root)*ave_n+today_red/n;
+        double ave_green=Read_json.read_ave_green(aj.root)*ave_n+today_green/n;
+        double ave_yellow=Read_json.read_ave_yellow(aj.root)*ave_n+today_yellow/n;
+        double[] ave_color={ave_red,ave_green,ave_yellow};
+
         if(today==today_y){
             today_calorie+=Read_json.read_today_calorie(aj.root);
             today_protein+=Read_json.read_today_protein(aj.root);
@@ -53,17 +65,6 @@ public class Main {
             today_green+=Read_json.read_today_green(aj.root);
             today_yellow+=Read_json.read_today_yellow(aj.root);
         }
-
-        double ave_calorie=Read_json.read_ave_calorie(aj.root)*(n-1/n)+today_calorie/n;
-        double ave_protein=Read_json.read_ave_protein(aj.root)*(n-1/n)+today_protein/n;
-        double ave_lipid=Read_json.read_ave_lipid(aj.root)*(n-1/n)+today_lipid/n;
-        double ave_carbohydrate=Read_json.read_ave_carbohydrate(aj.root)*(n-1/n)+today_carbohydrate/n;
-        double ave_salt=Read_json.read_ave_salt(aj.root)*(n-1/n)+today_salt/n;
-        double ave_red=Read_json.read_ave_red(aj.root)*(n-1/n)+today_red/n;
-        double ave_green=Read_json.read_ave_green(aj.root)*(n-1/n)+today_green/n;
-        double ave_yellow=Read_json.read_ave_yellow(aj.root)*(n-1/n)+today_yellow/n;
-        double[] ave_color={ave_red,ave_green,ave_yellow};
-
         try {
             String sa = Send_average.send_average(ave_calorie,ave_protein,ave_lipid,ave_carbohydrate,ave_salt,ave_red,ave_green,ave_yellow,start,today,today_calorie,today_protein,today_lipid,today_carbohydrate,today_salt,today_red,today_green,today_yellow);
             Send_average.write_json(sa);
