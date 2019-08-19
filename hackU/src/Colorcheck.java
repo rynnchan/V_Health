@@ -7,7 +7,6 @@ public class Colorcheck {
     public static final double MALE_SALT = 8.0;  // 男性の食塩基準
     public static final double FEMALE_SALT = 7.0;  // 女性の食塩基準
     
-    private static double[][] list = new double[3][7];
 
     // sex：性別、salt：塩分摂取量
     public static double salt(int sex, double salt) {
@@ -28,42 +27,15 @@ public class Colorcheck {
 
     // 各群の点数を要素とする配列を受け取り、1週間分の各群の点数の和を計算
     // そして、その和から最も点数の少ない群をintで返す関数
-    public static int minColor(double[] colors, int day) {
-        double[] sum = new double[3];
+    public static int minColor(double[] colors) {
         int color = RED;
-
-        // 受け取った各群の点数を配列に格納し、これまでの点数和を算出
-        for (int i = 0; i < 3; i++) {
-            list[i][day] += colors[i];
-            for (int j = 0; j < 7; j++) {
-                sum[i] += list[i][j];
-            }
-        }
         
         // 最も点数の少ない群の探索
-        if (sum[0] > sum[1] && sum[2] > sum[1])
+        if (colors[0] > colors[1] && colors[2] > colors[1])
             color = GREEN;
-        else if (sum[0] > sum[2] && sum[1] > sum[2])
+        else if (colors[0] > colors[2] && colors[1] > colors[2])
             color = YELLOW;
         
         return color;
-    }
-
-    public static double[][] getList(){
-        return list;
-    }
-    public static void printList(){
-        for(double[] val : getList()){
-            for(double x : val){
-                System.out.print(x+" ");
-            }
-            System.out.println();
-        }
-    }
-
-    public static void initializeList(int day){
-        for(int i=0; i<3; i++){
-            list[i][day] = 0;
-        }
     }
 }

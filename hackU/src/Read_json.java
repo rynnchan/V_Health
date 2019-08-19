@@ -4,50 +4,19 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 
 public class Read_json{
-    public int sex;
-    public int physicalActivityLevel;
-    public int[] bedTime;
-    public int[] wakeUpTime;
-    public int calorie;
-    public double protein;
-    public double lipid;
-    public double carbohydrate;
-    public double salt;
-    public double red;
-    public double green;
-    public double yellow;
+    public JsonNode root;
 
-    Read_json(){
+    Read_json(String filename){
         try {
-            File json = new File("hackU/json/server.json");
+            File json = new File(filename);
             ObjectMapper mapper = new ObjectMapper();
-            JsonNode root = mapper.readTree(json);
-
-            this.sex = read_sex(root);
-            this.physicalActivityLevel = read_level(root);
-            this.bedTime = read_sleep(root);
-            this.wakeUpTime = read_wake(root);
-            this.calorie = read_calorie(root);
-            this.protein = read_protein(root);
-            this.lipid = read_lipid(root);
-            this.carbohydrate = read_carbohydrate(root);
-            this.salt = read_salt(root);
-            this.red = read_red(root);
-            this.green = read_green(root);
-            this.yellow = read_yellow(root);
+            this.root = mapper.readTree(json);
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-    /*
-    以下の関数を使う場合には、
-    File json = new File("JSONのパス");
-    ObjectMapper mapper = new ObjectMapper();
-    JsonNode root = mapper.readTree(json);
-    が必要
-    */
 
     // JSONから性別のパラメータを受け取る関数
     public static int read_sex(JsonNode root) {
@@ -91,7 +60,7 @@ public class Read_json{
         }
         return (int)calorie;
     }
-    // JSONから摂取カロリーを受け取る関数
+    // JSONから摂取タンパク質を受け取る関数
     public static double read_protein(JsonNode root) {
         double protein=0.0;
         for (JsonNode n : root.get("meal")) {
@@ -99,7 +68,7 @@ public class Read_json{
         }
         return protein;
     }
-    // JSONから摂取カロリーを受け取る関数
+    // JSONから摂取脂質を受け取る関数
     public static double read_lipid(JsonNode root) {
         double lipid=0.0;
         for (JsonNode n : root.get("meal")) {
@@ -107,7 +76,7 @@ public class Read_json{
         }
         return lipid;
     }
-    // JSONから摂取カロリーを受け取る関数
+    // JSONから摂取炭水化物を受け取る関数
     public static double read_carbohydrate(JsonNode root) {
         double carbohydrate=0.0;
         for (JsonNode n : root.get("meal")) {
@@ -150,5 +119,64 @@ public class Read_json{
             yellow += n.get("yellow").doubleValue();
         }
         return yellow;
+    }
+
+    // JSONから赤の点数を受け取る関数
+    public static double[] read_color(JsonNode root) {
+        double[] color = {read_red(root),read_green(root),read_yellow(root)};
+        return color;
+    }
+
+    // JSONから摂取カロリーの平均を受け取る関数
+    public static double read_ave_calorie(JsonNode root){
+        double ave_calorie = root.get("ave_calorie").doubleValue();
+        return ave_calorie;
+    }
+
+    // JSONから摂取タンパク質の平均を受け取る関数
+    public static double read_ave_protein(JsonNode root){
+        double ave_protein = root.get("ave_protein").doubleValue();
+        return ave_protein;
+    }
+
+    // JSONから摂取脂質の平均を受け取る関数
+    public static double read_ave_lipid(JsonNode root){
+        double ave_lipid = root.get("ave_lipid").doubleValue();
+        return ave_lipid;
+    }
+
+    // JSONから摂取炭水化物の平均を受け取る関数
+    public static double read_ave_carbohydrate(JsonNode root){
+        double ave_carbohydrate = root.get("ave_carbohydrate").doubleValue();
+        return ave_carbohydrate;
+    }
+
+    // JSONから摂取塩分の平均を受け取る関数
+    public static double read_ave_salt(JsonNode root){
+        double ave_salt = root.get("ave_salt").doubleValue();
+        return ave_salt;
+    }
+
+    // JSONから赤の点数の平均を受け取る関数
+    public static double read_ave_red(JsonNode root){
+        double ave_red = root.get("ave_red").doubleValue();
+        return ave_red;
+    }
+
+    // JSONから緑の点数の平均を受け取る関数
+    public static double read_ave_green(JsonNode root){
+        double ave_green = root.get("ave_green").doubleValue();
+        return ave_green;
+    }
+
+    // JSONから黃の点数の平均を受け取る関数
+    public static double read_ave_yellow(JsonNode root){
+        double ave_yellow = root.get("ave_yellow").doubleValue();
+        return ave_yellow;
+    }
+    // JSONから開始時期を受け取る関数
+    public static int read_start(JsonNode root){
+        int start = root.get("start").intValue();
+        return start;
     }
 }
