@@ -40,8 +40,8 @@ public class Sleep {
     }
 
     public static double Sleep_hour(int[] sleep_time) {
-        double sleep_hour = sleep_time[0] + ((double)sleep_time[1] / 60);
-        sleep_hour = Math.round(sleep_hour*10)/10;
+        double sleep_hour = sleep_time[0] + ((double)sleep_time[1] / 60.0);
+        sleep_hour = Math.round(sleep_hour*10)/10.0;
         return sleep_hour;
     }
 
