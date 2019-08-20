@@ -4,8 +4,8 @@ public class Main {
     public static void main(String[] args) {
         
         // Unity側に送信するJSON作成
-        Read_json sj = new Read_json("hackU/json/server.json");
-
+//        Read_json sj = new Read_json("hackU/json/server.json");
+        Read_json sj = new Read_json("node_unity_app-master-2/json/data.json");
         int sex = Read_json.read_sex(sj.root);  // 性別
         int level = Read_json.read_level(sj.root);  // 身体活動レベル
         int calorie = Read_json.read_calorie(sj.root);  // 摂取カロリー
