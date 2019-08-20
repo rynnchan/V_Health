@@ -79,7 +79,7 @@ public class Main {
         }
 
         // このパラメータはサーバで計算される
-        int min_color = Colorcheck.minColor(ave_color); // 最も点数の少ない群
+        int min_color = Colorcheck.minColor(sex,ave_color); // 最も点数の少ない群
         
         // おすすめメニューが格納された配列
         String[] menu = Menu_prop.proposal(min_color);
