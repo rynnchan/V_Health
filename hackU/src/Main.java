@@ -86,10 +86,10 @@ public class Main {
 
         double[] ave = {ave_calorie,ave_protein,ave_lipid,ave_carbohydrate,ave_salt};
 
-        double sleep_hour = Sleep.Sleep_hour(Sleep.Sleep_time(start_h, start_m, end_h, end_m));
+        double sleep_h = Sleep.Sleep_hour(Sleep.Sleep_time(start_h, start_m, end_h, end_m));
 
         try {
-            String sf = Send_front.send_front(menu, ave, sleep_hour);
+            String sf = Send_front.send_front(menu, ave, sleep_h);
             Send_front.write_json(sf);
         } catch (Exception e) {
             e.printStackTrace();

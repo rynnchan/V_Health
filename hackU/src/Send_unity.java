@@ -15,7 +15,7 @@ public class Send_unity {
     public static void write_json(String json){
         try {
             // FileWriterクラスのオブジェクトを生成する
-            FileWriter file = new FileWriter("hackU/json/unity.json");
+            FileWriter file = new FileWriter("node_unity_app-master-2/public/dist/Build/test.json");
             // PrintWriterクラスのオブジェクトを生成する
             PrintWriter pw = new PrintWriter(new BufferedWriter(file));
             

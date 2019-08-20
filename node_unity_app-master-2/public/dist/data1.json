@@ -1,12 +1,12 @@
 {
-  "mainMenu" : "かぼちゃコロッケ",
+  "mainMenu" : "肉じゃが",
   "subMenu" : "15品目のヘルシーサラダ",
-  "donMenu" : "スタミナ焼肉丼",
-  "menMenu" : "味噌ラーメン",
-  "ave_calorie" : 1.0,
-  "ave_protein" : 2.0,
-  "ave_lipid" : 3.0,
-  "ave_carbo" : 4.0,
-  "ave_salt" : 100.0,
-  "sleep_h" : 13
+  "donMenu" : "天丼",
+  "menMenu" : "辛味噌ラーメン",
+  "ave_calorie" : 414.5,
+  "ave_protein" : 13.149999999999999,
+  "ave_lipid" : 15.600000000000001,
+  "ave_carbo" : 52.45,
+  "ave_salt" : 2.3,
+  "sleep_hour" : 6.0
 }

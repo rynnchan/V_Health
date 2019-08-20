@@ -8,9 +8,9 @@ public class Front{
     public double ave_lipid;
     public double ave_carbo;
     public double ave_salt;
-    public double sleep_hour;
+    public double sleep_h;
 
-    Front(String[] menu, double[] ave, double sleep_hour){
+    Front(String[] menu, double[] ave, double sleep_h){
         this.mainMenu = menu[0];
         this.subMenu = menu[1];
         this.menMenu = menu[2];
@@ -20,6 +20,6 @@ public class Front{
         this.ave_lipid = ave[2];
         this.ave_carbo = ave[3];
         this.ave_salt = ave[4];
-        this.sleep_hour = sleep_hour;
+        this.sleep_h = sleep_h;
     }
 }
