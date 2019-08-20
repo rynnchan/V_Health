@@ -15,7 +15,7 @@
     <script src="Build/UnityLoader.js"></script>
     <!--<script>
         var gameInstance = UnityLoader.instantiate("gameContainer", "Build/Demo_0819v4.json", {onProgress: UnityProgress});
-        gameInstance.SendMessage("MorphIvent", "dataPath", "http://localhost:8888/Build/test.json");
+        gameInstance.SendMessage("MorphIvent", "dataPath", "http://localhost:8080/Build/test.json");
     </script>-->
     <!--JSON/HTTP関係-->
     <script type="text/javascript" src="xmlhttp.js"></script>
@@ -233,7 +233,7 @@
                 </button>
               </div>
               <script>
-                  var gameInstance = UnityLoader.instantiate("gameContainer", "Build/Demo_0820.json", {onProgress: UnityProgress});
+                  var gameInstance = UnityLoader.instantiate("gameContainer", "Build/VHealth_completev1.json", {onProgress: UnityProgress});
                   function doReloadWithCache() {
                       // キャッシュを利用してリロード
                       gameInstance.SendMessage("MorphIvent", "dataPath", "http://localhost:8080/Build/test.json");
@@ -247,7 +247,7 @@
               <script>
               var gameInstance = UnityLoader.instantiate("gameContainer", "Build/Demo_0819v4.json", {onProgress: UnityProgress});
               document.querySelector("button").addEventListener("click", function () {
-                  gameInstance.SendMessage("MorphIvent", "dataPath", "http://localhost:8888/Build/test.json");
+                  gameInstance.SendMessage("MorphIvent", "dataPath", "http://localhost:8080/Build/test.json");
               });
               </script>-->
           </div>
