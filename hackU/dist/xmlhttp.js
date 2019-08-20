@@ -19,8 +19,8 @@ function createXMLHttpRequest(cbFunc)
 	return XMLhttpObject;
 }
 
- document.getElementById
-function $(tagId)
-{
-	return document.getElementById(tagId);
-}
+ //document.getElementById
+//function $(tagId)
+//{
+//	return document.getElementById(tagId);
+//}
