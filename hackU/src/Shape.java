@@ -11,21 +11,15 @@ public class Shape {
         double diff = ave_calorie - base;  // 摂取カロリーと基準値との差
         
         // 差の平均値を閾値で割り、影響度を設定（ただし影響度の範囲は[0,1]）
-        imp0 = diff / base * bias;
+        imp0 = diff / ((double)base * bias);
 
         if (imp0 > 0) {
             imp[0] = 0;
-            if (imp0 > 1)
-                imp[1] = 1;
-            else
-                imp[1] = imp0;
+            imp[1] = Math.min(1,imp0);
         }
         else {
             imp[1] = 0;
-            if (imp0 < -1)
-                imp[0] = 1;
-            else
-                imp[0] = Math.abs(imp0);
+            imp[0] = -Math.max(-1,imp0);
         }
         return imp;
     }

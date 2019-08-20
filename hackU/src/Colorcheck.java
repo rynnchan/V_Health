@@ -9,7 +9,7 @@ public class Colorcheck {
     public static final int MALE_POINT = 16;  //男性の黄色
     public static final int FEMALE_POINT = 11;  //女性の黄色
     
-
+/*
     // sex：性別、salt：塩分摂取量
     public static double salt(int sex, double salt) {
         double rat, imp;
@@ -26,7 +26,7 @@ public class Colorcheck {
 
         return imp;
     }
-
+*/
     // 各群の点数を要素とする配列を受け取り、1週間分の各群の点数の和を計算
     // そして、その和から最も点数の少ない群をintで返す関数
     public static int minColor(int sex, double[] colors) {
