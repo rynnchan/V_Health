@@ -1,12 +1,12 @@
 {
-  "mainMenu" : "肉じゃが",
-  "subMenu" : "15品目のヘルシーサラダ",
-  "donMenu" : "天丼",
-  "menMenu" : "辛味噌ラーメン",
-  "ave_calorie" : 414.5,
-  "ave_protein" : 13.149999999999999,
-  "ave_lipid" : 15.600000000000001,
-  "ave_carbo" : 52.45,
-  "ave_salt" : 2.3,
-  "sleep_hour" : 6.0
+  "mainMenu" : "スパイシーポテト",
+  "subMenu" : "切干大根",
+  "donMenu" : "かき揚げ天丼(小エビ入り)",
+  "menMenu" : "かき揚げそば",
+  "ave_calorie" : 1970.0,
+  "ave_protein" : 65.2,
+  "ave_lipid" : 62.1,
+  "ave_carbo" : 280.6,
+  "ave_salt" : 13.399999999999999,
+  "sleep_h" : 6.0
 }

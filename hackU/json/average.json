@@ -1,12 +1,12 @@
 {
-  "ave_calorie" : 0,
-  "ave_protein" : 0,
-  "ave_lipid" : 0,
-  "ave_carbohydrate" : 0,
-  "ave_salt" : 0,
-  "ave_red" : 0,
-  "ave_green" : 0,
-  "ave_yellow" : 0,
+  "ave_calorie" : 1970.0,
+  "ave_protein" : 65.2,
+  "ave_lipid" : 62.1,
+  "ave_carbohydrate" : 280.6,
+  "ave_salt" : 13.399999999999999,
+  "ave_red" : 3.0,
+  "ave_green" : 0.7,
+  "ave_yellow" : 20.200000000000003,
   "start" : 20190819,
-  "today" : 20190819
+  "today" : 20190820
 }
