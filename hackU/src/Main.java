@@ -7,7 +7,7 @@ public class Main {
 //        Read_json sj = new Read_json("hackU/json/server.json");
         Read_json sj = new Read_json("node_unity_app-master-2/json/data.json");
         int sex = Read_json.read_sex(sj.root);  // 性別
-        int level = Read_json.read_level(sj.root);  // 身体活動レベル
+        int level = Read_json.read_level(sj.root)-1;  // 身体活動レベル
         int calorie = Read_json.read_calorie(sj.root);  // 摂取カロリー
         double protein = Read_json.read_protein(sj.root);  // 摂取タンパク質
         double lipid = Read_json.read_lipid(sj.root);  // 摂取脂質

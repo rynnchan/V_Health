@@ -1,5 +1,5 @@
 public class Colorpoint {
-    public static final double p = 0.65; // ポアソン分布的なp
+    public static final double p = 0.75; // ポアソン分布的なp
     public static final int MALE_POINT = 16;
     public static final int FEMALE_POINT = 11;
     public static final int MALE = 0; // 男性を0とし
