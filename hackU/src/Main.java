@@ -55,18 +55,8 @@ public class Main {
         double ave_yellow=Read_json.read_ave_yellow(aj.root)*ave_n+today_yellow/n;
         double[] ave_color={ave_red,ave_green,ave_yellow};
 
-        if(today==today_y){
-            today_calorie+=Read_json.read_today_calorie(aj.root);
-            today_protein+=Read_json.read_today_protein(aj.root);
-            today_lipid+=Read_json.read_today_lipid(aj.root);
-            today_carbohydrate+=Read_json.read_today_carbohydrate(aj.root);
-            today_salt+=Read_json.read_today_salt(aj.root);
-            today_red+=Read_json.read_today_red(aj.root);
-            today_green+=Read_json.read_today_green(aj.root);
-            today_yellow+=Read_json.read_today_yellow(aj.root);
-        }
         try {
-            String sa = Send_average.send_average(ave_calorie,ave_protein,ave_lipid,ave_carbohydrate,ave_salt,ave_red,ave_green,ave_yellow,start,today,today_calorie,today_protein,today_lipid,today_carbohydrate,today_salt,today_red,today_green,today_yellow);
+            String sa = Send_average.send_average(ave_calorie,ave_protein,ave_lipid,ave_carbohydrate,ave_salt,ave_red,ave_green,ave_yellow,start,today);
             Send_average.write_json(sa);
         } catch (Exception e) {
             e.printStackTrace();
