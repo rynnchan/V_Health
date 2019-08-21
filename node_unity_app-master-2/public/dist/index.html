@@ -233,7 +233,7 @@
                 </button>
               </div>
               <script>
-                  var gameInstance = UnityLoader.instantiate("gameContainer", "Build/VHealth_completev1.json", {onProgress: UnityProgress});
+                  var gameInstance = UnityLoader.instantiate("gameContainer", "Build/VHealth_v3.json", {onProgress: UnityProgress});
                   function doReloadWithCache() {
                       // キャッシュを利用してリロード
                       gameInstance.SendMessage("MorphIvent", "dataPath", "http://localhost:8080/Build/test.json");
