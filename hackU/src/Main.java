@@ -4,7 +4,6 @@ public class Main {
     public static void main(String[] args) {
         
         // Unity側に送信するJSON作成
-//        Read_json sj = new Read_json("hackU/json/server.json");
         Read_json sj = new Read_json("node_unity_app-master-2/json/data.json");
         int sex = Read_json.read_sex(sj.root);  // 性別
         int level = Read_json.read_level(sj.root)-1;  // 身体活動レベル
@@ -57,7 +56,7 @@ public class Main {
 
         try {
             String sa = Send_average.send_average(ave_calorie,ave_protein,ave_lipid,ave_carbohydrate,ave_salt,ave_red,ave_green,ave_yellow,start,today);
-            Send_average.write_json(sa);
+            Send_average.write_json(sa,"hackU/json/average.json");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -73,7 +72,7 @@ public class Main {
 
         try {
             String su = Send_unity.send_unity(shape[1], shape[0], sleepy, balance[1], balance[0]);
-            Send_unity.write_json(su);
+            Send_unity.write_json(su,"node_unity_app-master-2/public/dist/Build/test.json");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -90,7 +89,7 @@ public class Main {
 
         try {
             String sf = Send_front.send_front(menu, ave, sleep_h);
-            Send_front.write_json(sf);
+            Send_front.write_json(sf,"node_unity_app-master-2/public/dist/data1.json");
         } catch (Exception e) {
             e.printStackTrace();
         }

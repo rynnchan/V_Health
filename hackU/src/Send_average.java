@@ -13,10 +13,10 @@ public class Send_average {
 
         return json;
     }
-    public static void write_json(String json){
+    public static void write_json(String json,String filename){
         try {
             // FileWriterクラスのオブジェクトを生成する
-            FileWriter file = new FileWriter("hackU/json/average.json");
+            FileWriter file = new FileWriter(filename);
             // PrintWriterクラスのオブジェクトを生成する
             PrintWriter pw = new PrintWriter(new BufferedWriter(file));
             

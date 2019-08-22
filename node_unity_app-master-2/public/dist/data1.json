@@ -1,12 +1,12 @@
 {
-  "mainMenu" : "スパイシーポテト",
-  "subMenu" : "切干大根",
-  "donMenu" : "かき揚げ天丼(小エビ入り)",
+  "mainMenu" : "揚げだし豆腐",
+  "subMenu" : "15品目のヘルシーサラダ",
+  "donMenu" : "サーモンサラダプレート",
   "menMenu" : "かき揚げそば",
-  "ave_calorie" : 1970.0,
-  "ave_protein" : 65.2,
-  "ave_lipid" : 62.1,
-  "ave_carbo" : 280.6,
-  "ave_salt" : 13.399999999999999,
-  "sleep_h" : 6.7
+  "ave_calorie" : 1659.6666666666665,
+  "ave_protein" : 53.266666666666666,
+  "ave_lipid" : 49.86666666666667,
+  "ave_carbo" : 241.66666666666666,
+  "ave_salt" : 10.2,
+  "sleep_h" : 8.0
 }
