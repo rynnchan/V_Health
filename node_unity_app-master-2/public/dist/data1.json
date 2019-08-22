@@ -1,12 +1,12 @@
 {
-  "mainMenu" : "揚げだし豆腐",
+  "mainMenu" : "肉じゃが",
   "subMenu" : "15品目のヘルシーサラダ",
-  "donMenu" : "サーモンサラダプレート",
-  "menMenu" : "かき揚げそば",
-  "ave_calorie" : 1659.6666666666665,
-  "ave_protein" : 53.266666666666666,
-  "ave_lipid" : 49.86666666666667,
-  "ave_carbo" : 241.66666666666666,
-  "ave_salt" : 10.2,
-  "sleep_h" : 8.0
+  "donMenu" : "天丼",
+  "menMenu" : "かき揚げうどん",
+  "ave_calorie" : 1985.9999999999998,
+  "ave_protein" : 64.03333333333333,
+  "ave_lipid" : 60.46666666666667,
+  "ave_carbo" : 289.5,
+  "ave_salt" : 12.133333333333333,
+  "sleep_h" : 8.2
 }
