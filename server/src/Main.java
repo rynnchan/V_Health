@@ -22,7 +22,7 @@ public class Main {
         //System.out.println(color[0]+","+color[1]+","+color[2]);
         // これより上の変数は実際にはフロントエンド側からJSONで受け取る
 
-        Read_json aj = new Read_json("hackU/json/average.json");
+        Read_json aj = new Read_json("server/json/average.json");
         int start=Read_json.read_start(aj.root);
         int today_y=Read_json.read_today(aj.root);
 
@@ -56,7 +56,7 @@ public class Main {
 
         try {
             String sa = Send_average.send_average(ave_calorie,ave_protein,ave_lipid,ave_carbohydrate,ave_salt,ave_red,ave_green,ave_yellow,start,today);
-            Send_average.write_json(sa,"hackU/json/average.json");
+            Send_average.write_json(sa,"server/json/average.json");
         } catch (Exception e) {
             e.printStackTrace();
         }
